@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>System Monitoring Dashboard</title>
+
+<link rel="stylesheet" href="css/SystemMonitoring.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div>
+            <h1>System Monitoring</h1>
+            <p>Real-time Device Analytics</p>
+        </div>
+
+        <div class="live-status">
+            <span class="dot"></span>
+            Live Monitoring
+        </div>
+
+    </div>
+
+    <!-- Top Cards -->
+
+    <div class="top-grid">
+
+        <div class="card">
+
+            <h3>Device Information</h3>
+
+            <div class="device-info">
+
+                <div class="row-item">
+                    <span>Device Name</span>
+                    <span>Kali Linux</span>
+                </div>
+
+                <div class="row-item">
+                    <span>IP Address</span>
+                    <span>192.168.121.128</span>
+                </div>
+
+                <div class="row-item">
+                    <span>MAC Address</span>
+                    <span>00:0C:29:20:68:60</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Open Ports</h3>
+
+            <div class="ports">
+
+                <div class="port">22</div>
+                <div class="port">80</div>
+
+            </div>
+
+            <div class="total-port">
+                Total Listening Ports : <strong>2</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Monitoring Cards -->
+
+    <div class="chart-grid">
+
+        <div class="card">
+
+            <div class="card-top">
+                <h3>CPU Usage</h3>
+                <div class="metric">0%</div>
+            </div>
+
+            <canvas id="cpuChart"></canvas>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-top">
+                <h3>RAM Usage</h3>
+                <div class="metric">13.5%</div>
+            </div>
+
+            <canvas id="ramChart"></canvas>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-top">
+                <h3>Disk Usage</h3>
+                <div class="metric">25.6%</div>
+            </div>
+
+            <canvas id="diskChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- Health Status -->
+
+    <div class="card health-card">
+
+        <h3>Health Status</h3>
+
+        <div class="health-list">
+
+            <div class="health-item">
+                <span>Server</span>
+                <span class="badge online">Online</span>
+            </div>
+
+            <div class="health-item">
+                <span>Database</span>
+                <span class="badge online">Connected</span>
+            </div>
+
+            <div class="health-item">
+                <span>Firewall</span>
+                <span class="badge online">Active</span>
+            </div>
+
+            <div class="health-item">
+                <span>CPU Temperature</span>
+                <span class="badge warning">58°C</span>
+            </div>
+
+            <div class="health-item">
+                <span>Critical Alerts</span>
+                <span class="badge danger">1 Alert</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/SystemMonitoring.js"></script>
+
+</body>
+</html>
